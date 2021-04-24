@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    
+    <title>左程云算法第一课 | MyBlog</title>
+    
+    <link rel="alternative" href="/atom.xml" title="MyBlog" type="application/atom+xml">
+    
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+    <link rel="stylesheet" href="/libs/fancybox/jquery.fancybox.css" charset="utf-8">
+    
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body class="site">
+    <header class="site-header">
+        <h1 class="site-title"><a href="/">MyBlog</a></h1>
+        <nav class="site-nav">
+            <ul class="nav">
+                
+                <li><a href="/archives">Archives</a></li>
+                
+                
+                <li><a href="/atom.xml" title="RSS Feed">rss</a></li>
+                
+                <li><a class="toggle-search" href="#search">search</a></li>
+            </ul>
+        </nav>
+        <div class="site-search" id="search">
+            <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><input type="hidden" name="sitesearch" value="https://ChinaJsHsk.github.io"></form>
+        </div>
+        
+            <div class="site-header-background" style="background-image:url(http://reumia.github.io/hexo-theme-zzoman2015/images/background-zzoman2015.jpg)"></div>
+        
+    </header>
+    <div class="site-body">
+        <div class="global-width">
+    <article class="article" data-layout="post" data-slug="算法/【左程云算法】【Test】">
+        <div class="article-content">
+            
+            
+            <header class="article-header">
+                <div class="article-meta">
+                    <a href="/2021/04/07/%E7%AE%97%E6%B3%95/%E3%80%90%E5%B7%A6%E7%A8%8B%E4%BA%91%E7%AE%97%E6%B3%95%E3%80%91%E3%80%90Test%E3%80%91/" class="article-date">
+  <time datetime="2021-04-06T19:12:02.000Z">2021-04-07</time>
+</a>
+                    
+  <div class="article-category categories">
+    <a class="category-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a>
+  </div>
+
+                    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a></li></ul>
+
+                </div>
+                
+    <h1 class="article-title" itemprop="name">
+      <a href="/2021/04/07/%E7%AE%97%E6%B3%95/%E3%80%90%E5%B7%A6%E7%A8%8B%E4%BA%91%E7%AE%97%E6%B3%95%E3%80%91%E3%80%90Test%E3%80%91/">左程云算法第一课</a>
+    </h1>
+
+            </header>
+            
+            <div class="article-body">
+                <h3 id="【左程云-01】算法的-概念-与-性质"><a href="#【左程云-01】算法的-概念-与-性质" class="headerlink" title="【左程云 01】算法的 概念 与 性质"></a>【左程云 01】算法的 概念 与 性质</h3><p><br><br><br></p>
+<p><font color=DarkGray size=2>算法要求：在保证时间复杂度最低的前提下，尽可能减小空间复杂度与常数项时间复杂度；</font></p>
+<hr>
+<br>
+
+<h4 id="优劣算法评估"><a href="#优劣算法评估" class="headerlink" title="优劣算法评估"></a>优劣算法评估</h4><ul>
+<li><font color=7baf23 >时间</font>复杂度（流程决定）<ul>
+<li>忽略低阶项 与 高阶项的系数，留下来的就是时间复杂度；</li>
+<li>如一个流程最后得到的算式是 3 * N<sup>4</sup> + 4 * N<sup>2</sup> + C ，则最终时间复杂度就是 O( N<sup>4</sup> )  </li>
+</ul>
+</li>
+<li>额外<font color=7baf23 >空间</font>复杂度（流程决定）<ul>
+<li>与功能无关，必须自己开辟的额外空间</li>
+<li>用户要求的功能，（如复制一个数组），则实现这个功能所使用的代码空间不算</li>
+</ul>
+</li>
+<li>常数项时间（实现细节决定）</li>
+</ul>
+<br>
+
+<br>
+
+<h4 id="常数与非常数时间操作"><a href="#常数与非常数时间操作" class="headerlink" title="常数与非常数时间操作"></a>常数与非常数时间操作</h4><ul>
+<li><p>什么是<font color=DarkOrange>常数</font>时间操作？</p>
+<ul>
+<li><p>概念：一个数据改变偏移量，操作所需要的时间不变就是常数时间操作；</p>
+</li>
+<li><p>实例：从数组中取第一个与取第100000个元素所需要的时间一样，则这就是一个常数操作；</p>
+</li>
+<li><p>常见的此类操作：</p>
+<ul>
+<li>加 / 减 / 乘 / 除 / 取余 ：<code>+</code>  <code>-</code> <code>* </code> <code>/</code> <code>%</code></li>
+<li>常见的位运算操作（&gt;&gt; / &gt;&gt;&gt; / &lt;&lt; / | &amp; / ^ 等）</li>
+<li>赋值、比较、自增、自减操作等</li>
+<li>数组寻址操作</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>什么是<font color=orange>非</font>常数时间操作：</p>
+<ul>
+<li>除了常数时间操作都是非常数时间操作；</li>
+<li>举例：LinkedList，寻址的时候需要遍历；</li>
+</ul>
+</li>
+<li><p>排序算法中的常见优劣性</p>
+</li>
+</ul>
+<p><font color=darkgray size=2> 尽量可以背下来； </font></p>
+<hr>
+<table>
+<thead>
+<tr>
+<th>中文名称</th>
+<th>英文名称</th>
+<th>平均时间复杂度</th>
+<th>最坏时间复杂度</th>
+<th>最好时间复杂度</th>
+<th>空间复杂度</th>
+<th>稳定性</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>选择排序</td>
+<td>Selection</td>
+<td>n²</td>
+<td>n²</td>
+<td>n²</td>
+<td>1</td>
+<td><font color=red>×</font></td>
+</tr>
+<tr>
+<td>冒泡排序</td>
+<td>Bubble</td>
+<td>n²</td>
+<td>n²</td>
+<td>n</td>
+<td>1</td>
+<td><font color = 7baf23> √</font></td>
+</tr>
+<tr>
+<td>插入排序<font color = 7baf23> √</font></td>
+<td>Insertion</td>
+<td>n²</td>
+<td>n²</td>
+<td>n</td>
+<td>1</td>
+<td><font color = 7baf23> √</font></td>
+</tr>
+<tr>
+<td>堆排序<font color = 7baf23>     √</font></td>
+<td>Heap</td>
+<td>n log<sub>2</sub> n</td>
+<td>n log<sub>2</sub> n</td>
+<td>n log<sub>2</sub> n</td>
+<td>1</td>
+<td><font color=red>×</font></td>
+</tr>
+<tr>
+<td>希尔排序</td>
+<td>Shell</td>
+<td>n<sup>1.3</sup></td>
+<td>n<sup>2</sup></td>
+<td>n</td>
+<td>1</td>
+<td><font color=red>×</font></td>
+</tr>
+<tr>
+<td>归并排序<font color = 7baf23> √</font></td>
+<td>Merge</td>
+<td>n log<sub>2</sub> n</td>
+<td>n log<sub>2</sub> n</td>
+<td>n log<sub>2</sub> n</td>
+<td>n</td>
+<td><font color = 7baf23>√</font></td>
+</tr>
+<tr>
+<td>快速排序<font color = 7baf23> √</font></td>
+<td>Quick</td>
+<td>n log<sub>2</sub> n</td>
+<td>n<sup>2</sup></td>
+<td>n log<sub>2</sub> n</td>
+<td>log<sub>2</sub> n</td>
+<td><font color=red>×</font></td>
+</tr>
+<tr>
+<td>桶排序</td>
+<td>Bucket</td>
+<td>n + k</td>
+<td>n<sup>2</sup></td>
+<td>n</td>
+<td>n + k</td>
+<td><font color = 7baf23>√</font></td>
+</tr>
+<tr>
+<td>计数排序</td>
+<td>Counting</td>
+<td>n + k</td>
+<td>n + k</td>
+<td>n + k</td>
+<td>n + k</td>
+<td><font color = 7baf23>√</font></td>
+</tr>
+<tr>
+<td>基数排序</td>
+<td>Radix</td>
+<td>n * k</td>
+<td>n * k</td>
+<td>n * k</td>
+<td>n + k</td>
+<td><font color = 7baf23>√</font></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>举例：插入排序的最优与最差时间复杂度</p>
+<ul>
+<li>最优例子：【0 1 2 3 4 5 6 】</li>
+<li>最差例子：【6 5 4 3 2 1 0 】</li>
+</ul>
+</blockquote>
+<hr>
+<p><br><br></p>
+<h4 id="合理使用对数器"><a href="#合理使用对数器" class="headerlink" title="合理使用对数器"></a>合理使用对数器</h4><hr>
+<br>
+
+<blockquote>
+<ul>
+<li>认识对数器<ul>
+<li>想要测试的 方法 a</li>
+<li>实现复杂度不好但使用以实现的 方法 b</li>
+<li>实现一个随机样本产生器</li>
+<li>把 方法 a 和 方法 b 跑相同的随机样本，看得到的结果是否一致</li>
+<li>如果一个随机样本使比对结果不一致，打印样本进行人工干预，改对 方法 a 和 方法 b；</li>
+<li>当样本数量很多时比对测试依然正确，则可以确定方法 a 已经正确。 </li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><br><br><br><br></p>
+<h3 id="算法示例（重要！）"><a href="#算法示例（重要！）" class="headerlink" title="算法示例（重要！）"></a>算法示例（重要！）</h3><hr>
+<br>
+
+<ul>
+<li>从一个长度为 n 的 <font color=DarkOrange>有序数组 </font>中寻找一个数字 m；</li>
+</ul>
+<blockquote>
+<p>方法一：遍历： O（ n ）</p>
+<p>方法二：二分查找法： O（ log<sub>2</sub> N ）</p>
+</blockquote>
+<br>
+
+<hr>
+<br>
+
+<ul>
+<li>从一个长度为 n 的 <font color=red> <strong>无</strong> </font> <font color=DarkOrange>序数组（相邻不等）</font> 中寻找一个局部最小值（任意一个）；</li>
+</ul>
+<blockquote>
+<p>略</p>
+</blockquote>
+<br>
+
+<hr>
+<br>
+
+<ul>
+<li>一个数组中有一种数出现了奇数次，其他的都是偶数次，找出这个奇数次的数字：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用一个 0 从头异或到尾，最后这个 0 数字就会变成 那个 奇数数字；</span></span><br><span class="line"><span class="keyword">int</span> eor = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">int</span>[]  arr = [ <span class="number">2</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">3</span>,<span class="number">1</span>,<span class="number">2</span>,<span class="number">4</span>,<span class="number">1</span>,<span class="number">4</span>];</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.size();i++)&#123;</span><br><span class="line"></span><br><span class="line">	eor = aor^arr.get(i);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<br>
+
+<hr>
+<br>
+
+<ul>
+<li>abcde 五个数字异或的结果一样，顺序无所谓（ 满足 <font color= 7baa2>交换律</font> 与 <font color= 7baf23>结合律</font> ）</li>
+</ul>
+<blockquote>
+<p>异或<font color=Orange>常用公式</font>：</p>
+<blockquote>
+<p>0  ^ N == N</p>
+<p>N ^ N == 0</p>
+</blockquote>
+<p>a b 两个数字交换值：（自己推导一下，很简单，不懂得可以看推导过程 <strong>A01</strong>。）</p>
+<p>a = a ^ b</p>
+<p>b = a ^ b</p>
+<p>a = a ^ b</p>
+</blockquote>
+<br>
+
+<hr>
+<br>
+
+<ul>
+<li>一个数字，取出最右侧的 1 ，如 14 二进制之后变成【 1 1 <u><code>1</code></u> 0】 取出下划线的 <code>1</code></li>
+</ul>
+<blockquote>
+<p>如 要计算的是 a</p>
+<p>则 b = a取反 + 1</p>
+<p>a = a ^ b;</p>
+</blockquote>
+<br>
+
+<hr>
+<br>
+
+<ul>
+<li>一个数组中有两种数（这两个数字不相等且 a ! = 0,b != 0 ）出现了奇数次，其他的都是偶数次，找出这两种奇数次的数字：</li>
+</ul>
+<blockquote>
+<p>根据第三题的理论：好比这两个数字是 a 和 b，eor 异或之后 得到的结果是 a ^ b（a != b）</p>
+<p>根据第五题的理论：eor 一定在某一个位置有个1（记此位置为 n ），那这个位置对于 a 和 b 来说，一定不一样，（a 和 b 在这一位上一定一个是 0 一个是 1）</p>
+<p>那整个数组一定可以分为两大类 ：第n位为 0 的数 与 第n位为 1 的数，出现偶数次的数无论怎么分都无所谓，所以执行下面的步骤：</p>
+<p>eor异或之前 + 一个条件，只要第 n 位为 0 （或者只异或 为 1的）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> rightOne = eor &amp; (~eor + <span class="number">1</span>); <span class="comment">// 取出最右侧的那个 1</span></span><br><span class="line"><span class="keyword">int</span> onlyOne  = <span class="number">0</span>;<span class="comment">// eor&#x27;</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>;i &lt; arr.length;i++)&#123;</span><br><span class="line">    <span class="keyword">if</span>((arr[i]) &amp; rightOne)!=<span class="number">0</span>)&#123;</span><br><span class="line">        onlyOne ^= arr[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">System.out.println(onlyOne+<span class="string">&quot;&quot;</span>+(eor^onlyOne));</span><br></pre></td></tr></table></figure>
+
+<p>那么一个数已经出来了，就是eor，另一个数就是 eor ^ eor’ （ eor 异或上 eor 取反）</p>
+</blockquote>
+<br>
+
+<hr>
+<br>
+
+<ul>
+<li>找一个二进制数字中所有的 1</li>
+</ul>
+<blockquote>
+<p>找出最右侧的 1 记为 rightOne</p>
+<p>rightOne 与 这个数字 异或，这就消除了最右侧的 1</p>
+<p>重复第一步与第二部，直到找不到 rightOne</p>
+</blockquote>
+<p><br><br><br><br></p>
+<h3 id="补充"><a href="#补充" class="headerlink" title="补充"></a>补充</h3><hr>
+<br>
+
+<h4 id="推导过程-A01"><a href="#推导过程-A01" class="headerlink" title="推导过程 A01"></a>推导过程 A01</h4><blockquote>
+<p>甲 乙 两个数字交换值，让int a = 甲，int b = 乙：</p>
+<ul>
+<li>a = a ^ b </li>
+</ul>
+<blockquote>
+<p>此时 a = 甲 ^ 乙 ;b = 乙;</p>
+</blockquote>
+<ul>
+<li>b = a ^ b</li>
+</ul>
+<blockquote>
+<p>此时 b = 甲 ^ 乙 ^ 乙;（由于 a 在上一步已经等于 “甲 ^ 乙” 了）</p>
+<p>根据公式：N ^ N == 0，所以 b ^ b == 0；（异或满足交换定律，运算顺序无所谓）</p>
+<p>根据公式：0 ^ N == N，所以  a ^ 0 == a ， 所以 b = a;</p>
+</blockquote>
+<ul>
+<li>a = a ^ b</li>
+</ul>
+<blockquote>
+<p>此时的 a == 甲 ^ 乙，b == 甲，所以这个算是可以写成：a = 甲 ^ 乙 ^ 甲；</p>
+<p>所以得到 a = 乙（原理同第二步）</p>
+</blockquote>
+</blockquote>
+<hr>
+<br>
+
+<h4 id="二分法注意事项："><a href="#二分法注意事项：" class="headerlink" title="二分法注意事项："></a>二分法注意事项：</h4><blockquote>
+<p>方法一：mid = ( L + R ) / 2</p>
+<p>改    进：mid = L + ( R - L ) / 2</p>
+<p>N / 2 == N &gt;&gt; 1    （位运算速度比除运算快）</p>
+<p>mid = L + ( R - L ) &gt;&gt; 1</p>
+</blockquote>
+
+            </div>
+        </div>
+    </article>
+
+    
+    
+<nav class="article-nav">
+  
+    <a href="/2021/04/09/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E5%81%A5%E7%BE%8E%E8%BF%90%E5%8A%A8%E5%91%98/" id="article-nav-newer" class="article-nav-link-wrap prev">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          如何成为一名健美运动员
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/04/07/HelloWorld/" id="article-nav-older" class="article-nav-link-wrap next">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+    
+
+    
+</div>
+    </div>
+    <footer class="site-footer">
+        <div class="global-width">
+            <ul class="site-widget">
+                
+                <li class="widget widget-tag">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget-body">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Read/" rel="tag">Read</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Test/" rel="tag">Test</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%88%9D%E5%A7%8B/" rel="tag">初始</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E6%B5%8B%E8%AF%95/" rel="tag">测试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%AE%97%E6%B3%95/" rel="tag">算法</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-category">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget-body">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%B5%8B%E8%AF%95/">测试</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AE%97%E6%B3%95/">算法</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/">读书笔记</a><span class="category-list-count">2</span></li></ul>
+    </div>
+  </div>
+
+                </li>
+                
+                <li class="widget widget-recent_posts">
+                    
+  <div class="widget-wrap">
+    <h3 class="widget-title">最近</h3>
+    <div class="widget-body">
+      <ul>
+        
+          <li>
+            <a href="/2021/04/22/%E6%B5%8B%E8%AF%95/%E5%9B%BE%E7%89%87%E6%B5%8B%E8%AF%95/">我的读书笔记.md</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/09/%E5%A6%82%E4%BD%95%E6%88%90%E4%B8%BA%E4%B8%80%E5%90%8D%E5%81%A5%E7%BE%8E%E8%BF%90%E5%8A%A8%E5%91%98/">如何成为一名健美运动员</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/07/%E7%AE%97%E6%B3%95/%E3%80%90%E5%B7%A6%E7%A8%8B%E4%BA%91%E7%AE%97%E6%B3%95%E3%80%91%E3%80%90Test%E3%80%91/">左程云算法第一课</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/07/HelloWorld/">Hello World</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/03/%E6%88%91%E7%9A%84%E7%AC%AC%E4%BA%8C%E7%AF%87%E5%8D%9A%E5%AE%A2-md/">我的第二篇博客【测试】</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+                </li>
+                
+            </ul>
+        </div>
+        <div class="site-info">
+            <address>
+                &copy; 2014 <a href="https://ChinaJsHsk.github.io">MyBlog</a> All Right77 Reserved. <br/>
+                Powered by <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>. Theme by <a target="_blank" rel="noopener" href="http://zzoman.com">ZZOMAN</a>
+            </address>
+        </div>
+    </footer>
+    
+    <script src="/libs/jquery-1.11.3.min.js" type="text/javascript"></script>
+    
+    <script src="/libs/fancybox/jquery.fancybox.js" type="text/javascript"></script>
+    
+    <script src="/js/site_init.js" type="text/javascript"></script>
+    
+</body>
+</html>
